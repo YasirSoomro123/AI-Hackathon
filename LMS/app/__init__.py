@@ -69,6 +69,7 @@ def create_app(config_class=Config):
     app.register_blueprint(auth_bp)
     app.register_blueprint(student_bp)
     app.register_blueprint(admin_bp)
+    csrf.exempt(api_bp)
     app.register_blueprint(api_bp)
     app.register_blueprint(teacher_bp)
 
